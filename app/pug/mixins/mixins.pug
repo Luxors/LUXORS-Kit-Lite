@@ -1,0 +1,39 @@
+include svg-icon.pug
+
+mixin input-text(label, type, id, value)
+    .form-group
+        label(for=id)= label
+        input(type=type, id=id, value=value)
+
+mixin input-checkbox(label, type, id, name)
+    .form-group
+        input(type=type, id=id, name=name)&attributes(attributes)
+        label(for=id)= label
+
+//- Mixin which creates a list        
+mixin list(id, ul, li, ...items)
+    ul(class=ul)
+        each item in items
+            li(class=li)= item
+
+
+//- Mixin which creates a single level menu with links
+//- Usage
+//- +nav("top-menu", {'About': 'about.html', 'Sitemap': 'sitemap.html', 'A-Z Index': 'a-z-index.html', 'Contact': 'contact.html' })
+mixin menu(menuClassName, menuAtts)
+    - var liClassName = menuClassName.concat("__item")
+    - var linkClassName = menuClassName.concat("__link")
+
+    ul&attributes({'class': menuClassName})
+            each menuItemLink, menuItemText in menuAtts            
+                li&attributes({"class" : liClassName})
+                    +menu_link(menuItemLink, menuItemText, linkClassName)
+
+mixin menu_link(menuItemLink, menuItemText, linkClassName)
+    - var linkClassName = (menuItemText == "Home") ? linkClassName + " active" : linkClassName
+    a&attributes({
+        "class" : linkClassName,
+        "href"  : menuItemLink,
+        "title" : menuItemText,
+        "target": "_blank"
+    })= menuItemText

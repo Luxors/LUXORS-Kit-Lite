@@ -1,0 +1,37 @@
+//libs
+@import 'scss/smart-grid';
+
+//helpers
+@import 'scss/variables';
+@import 'scss/mixins';
+@import 'scss/fonts';
+//@import 'scss/sprites';
+
+//global styles
+@import 'scss/normalize';
+@import 'scss/common';
+
+//elements
+@import 'scss/elements/button-btn';
+@import 'scss/elements/button-link';
+@import 'scss/elements/title';
+
+//blocks
+@import 'scss/blocks/form-order';
+@import 'scss/blocks/form-callback';
+@import 'scss/blocks/form-thanks';
+@import 'scss/blocks/logo';
+@import 'scss/blocks/fast';
+@import 'scss/blocks/call';
+@import 'scss/blocks/title-main/title-main';
+@import 'scss/blocks/discount';
+@import 'scss/blocks/advantage';
+@import 'scss/blocks/differences';
+@import 'scss/blocks/video'
+@import 'scss/blocks/description'
+@import 'scss/blocks/price';
+@import 'scss/blocks/timekeeper';
+@import 'scss/blocks/opinion';
+@import 'scss/blocks/map';
+@import 'scss/blocks/work';
+

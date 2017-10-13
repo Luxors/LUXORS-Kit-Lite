@@ -1,0 +1,32 @@
+include mixins/blocks-mixins
+include mixins/mixins
+
+doctype html
+html(lang="en")
+	head
+		block head
+			meta(charset="UTF-8")
+			meta(http-equiv="X-UA-Compatible", content="IE=edge")
+			meta(name="viewport",content="width=device-width, initial-scale=1")
+			title title
+			meta(name="description",content="")
+			meta(name='keywords' content="")
+			meta(name="author",content="")
+			link(rel="icon",href="../../favicon.ico")
+			block styles
+				link(rel="stylesheet" href="./libs/bootstrap/bootstrap.min.css")
+				link(rel="stylesheet" href="./styles/styles.min.css")
+			
+			// [if lt IE 9]>
+			// script(src="./libs/html5shiv/es5-shim.min.js")
+			// script(src="./libs/html5shiv/html5shiv.min.js")
+			// script(src="./libs/html5shiv/html5shiv-printshiv.min.js")
+			// script(src="./libs/respond/respond.min.js")
+			// <![endif]	
+	body
+		block body
+
+
+		block scripts
+			script(src="./libs/jquery/jquery-3.2.1.min.js" defer)
+			script(src="./scripts/common.min.js" defer)

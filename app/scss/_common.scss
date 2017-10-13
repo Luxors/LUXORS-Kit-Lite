@@ -1,0 +1,14 @@
+body {
+	@include centering(1900px);
+  font-size: $font-size;
+  font-family: $font-main;
+  font-weight: bold;
+  color: $main-color;
+  background-color: #fef9fd;
+}
+.wrapper {
+	@include centering(1550px);
+	padding-left: 30px;
+	padding-right: 30px;
+	position: relative;
+}
